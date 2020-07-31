@@ -98,6 +98,7 @@ export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit
         this.hintsHalf = 0;
         this.hintsFull = 0;
         // hintArray tab will contain the hints for the user
+        this.hintArray = [];
         this.hintArray = this.calculateHints(this.selectedColors);
 
         // counter guesses, already explained at the top of this file
