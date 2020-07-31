@@ -113,12 +113,12 @@ export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit
 
         // if all the hints into hintArray are equals to 'full' (which means all the colors are good and well placed) then alert victory
         if (hintArray.every(hints => hints === 'full') && (hintArray.length === this.final.length)) {
-            alert('Gagné ! Bravo');
+            /*alert('Gagné ! Bravo');
             this.selectedColors.length = 0;
             hintArray.length = 0;
             this.selectedColorsToBindOnHints.length = 0;
             this.hintsHistory.length = 0;
-            this.guesses = 0;
+            this.guesses = 0;*/
         }
 
         this.selectedColors.length = 0;
