@@ -17,9 +17,7 @@ For the test you can run 'ng test' or even 'npm test'.
 
 If you want more informations, just check the informations below.
 
-
-Thank you, and have a nice day !
-
+Anyway, Thank you, and have a nice day !
 
 
 # WdgMastermind
