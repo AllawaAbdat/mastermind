@@ -17,9 +17,11 @@ For the test you can run 'ng test' or even 'npm test'.
 
 If you want more informations, just check the informations below.
 
+And if you still having some troubles, just go here : https://mastermind-4537a.web.app/
 
-Thank you, and have a nice day !
+This is this application deployed on firebase. The responsive (with mobile phone) will not work at 100%, it's 'normal', i still not worked on it. But it work pretty well on computers.
 
+Anyway, Thank you, and have a nice day !
 
 
 # WdgMastermind
