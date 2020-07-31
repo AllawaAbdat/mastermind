@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html, body { 
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'OpenSans';
+    margin: 0;
+}
+
+body { 
+    margin: 0;
+    font-family: 'OpenSans';
+    background-color: #212121;
+    color: white;
+}
+
+.footer-custom {
+    margin-top: auto;
+}
+
+.xp-img {
+    height: 150px !important;
+    width: 70% !important;
+    display: table;
+    margin: 0 auto;
+    font-size: 20px;
+    object-fit: contain;
+}
+
+.main-root {
+    margin-top: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url(./assets/fonts/OpenSans/OpenSans-Regular.ttf) format("truetype");
+    font-weight:300;
+}

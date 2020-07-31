@@ -1,0 +1,67 @@
+<!-- Allawa ABDAT | Mastermind | Wedoogift | 30/07/2020 -->
+
+<!-- Header -->
+<app-wdg-header-strap [titleHeader]="title" [imgPath]="imgPath"></app-wdg-header-strap>
+<!-- Header -->
+
+
+<!-- Content -->
+<div class="container-fluid my-5 py-5 px-4 px-lg-0" style="margin-left: 15px; margin-right:15px; margin: 0 auto; width: 100%; background-color: #fafafa;"  data-aos="fade-down-right" data-aos-duration="1200">
+    <!-- Title -->
+    <h3 style="text-align:center; color: black"> Choisissez vos couleurs (4 maximum) </h3>
+
+    <!-- We start to list our items/colors -->
+    <!-- (rouge (R), jaune (J), bleu (B), orange (O), vert (V), noir (N) -->
+    <!-- Using *ngFor structural directives to create elements into the DOM -->
+    <div style="margin-top:35px;" class="choices">
+        <div class="row col-md-12" style="justify-content: center; text-align: center; margin: 0 auto; place-content: center;">
+            <div *ngFor='let clr of tabColor' style="margin-left: 15px" class="item {{clr.color}}" (click)="selectColor(clr.color)"></div>
+        </div>
+    </div>
+    <br>
+
+
+    <!-- Color selected -->
+    <h3 style="text-align:center; color: black; margin-top: 10px;">Selection en cours :</h3>
+
+    <div style="margin-left: 15px; text-align: center; justify-content: center;" class="row selection">
+        <div class="row col-md-12" style="justify-content: center; text-align: center; margin: 0 auto; place-content: center;">
+            <div *ngFor="let selectedClr of selectedColors" class="selection-item {{selectedClr}}" style="margin-left: 15px; margin-right:15px;"></div>
+        </div>
+    </div>
+
+
+    <!-- Hint/Clue/Try -->
+    <h3 style="text-align:center; color: black;  margin-top: 25px;">Tentatives :</h3>
+    <!-- How many try -->
+    <div>
+        <p style="text-align:center; color: black;">{{guesses}}/10</p>
+    </div>
+
+    <!-- Title -->
+    <h3 style="color: black; justify-content: center; text-align: center; margin: 0 auto; place-content: center;">Historique (Couleurs) :</h3>
+
+    <!-- Display history and hints for each row -->
+    <div style="margin-left: 15px; text-align: center; justify-content: center;" class="row">
+        <div class="col-md-4" style="justify-content: center; text-align: center; margin: 0 auto; place-content: center;">
+                <div style="margin-top: 10px;" *ngFor="let clrs of selectedColorsToBindOnHints.reverse();">
+                    <div style="height: 100px;" class="row">
+                        <div class="history-item {{clrs[0]}}" style="margin-left: 15px; margin-right:15px;"></div>
+                        <div class="history-item {{clrs[1]}}" style="margin-left: 15px; margin-right:15px;"></div>
+                        <div class="history-item {{clrs[2]}}" style="margin-left: 15px; margin-right:15px;"></div>
+                        <div class="history-item {{clrs[3]}}" style="margin-left: 15px; margin-right:15px;"></div>
+                    </div>
+                    <hr>
+                </div>
+        </div>
+        <div class="col-md-8">
+            <div style="margin-top: 10px;" *ngFor="let hint of hintsHistory.reverse();">
+                <div style="height: 100px;" class="column">
+                    <p style="font-size: 14px; color: black;">Couleur(s) Juste(s) mais mal placée : {{hint[0]}}</p>
+                    <p style="font-size: 14px; color: black;">Couleur(s) Juste(s) et bien placée : {{hint[1]}}</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>

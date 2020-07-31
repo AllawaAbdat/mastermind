@@ -1,0 +1,47 @@
+/**
+ * Allawa ABDAT | Mastermind | Wedoogift | 30/07/2020
+ */
+
+ .item,
+ .selection-item,
+ .history-item {
+     width: 100px;
+     height: 100px;
+     border-radius: 20px;
+ }
+ 
+ .red {
+     background-color: red;
+ }
+ 
+ .yellow {
+     background-color: yellow;
+ }
+ 
+ .blue {
+     background-color: blue;
+ }
+ 
+ .orange {
+     background-color: orange;
+ }
+ 
+ .green {
+     background-color: green;
+ }
+ 
+ .black {
+     background-color: black;
+ }
+ 
+ .full {
+     width: 25px;
+     height: 25px;
+     background-color: red;
+ }
+ 
+ .half {
+     width: 25px;
+     height: 25px;
+     background-color: purple;
+ }

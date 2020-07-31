@@ -1,0 +1,17 @@
+.inner2 {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.xp-img {
+  height: 255px !important;
+  width: 70% !important;
+  display: table;
+  margin: 0 auto;
+  font-family: monospace;
+  font-size: 20px;
+  object-fit: contain;
+}
+
