@@ -44,23 +44,17 @@
     <!-- Display history and hints for each row -->
     <div style="margin-left: 15px; text-align: center; justify-content: center;" class="row">
         <div class="col-md-4" style="justify-content: center; text-align: center; margin: 0 auto; place-content: center;">
-                <div style="margin-top: 10px;" *ngFor="let clrs of selectedColorsToBindOnHints.reverse();">
-                    <div style="height: 100px;" class="row">
-                        <div class="history-item {{clrs[0]}}" style="margin-left: 15px; margin-right:15px;"></div>
-                        <div class="history-item {{clrs[1]}}" style="margin-left: 15px; margin-right:15px;"></div>
-                        <div class="history-item {{clrs[2]}}" style="margin-left: 15px; margin-right:15px;"></div>
-                        <div class="history-item {{clrs[3]}}" style="margin-left: 15px; margin-right:15px;"></div>
-                    </div>
-                    <hr>
-                </div>
+            <div class="row" style="height: 100px; margin-top: 10px;" *ngFor="let clrs of selectedColorsToBindOnHints.reverse();">
+                <div class="history-item {{clrs[0]}}" style="margin-left: 15px; margin-right:15px;"></div>
+                <div class="history-item {{clrs[1]}}" style="margin-left: 15px; margin-right:15px;"></div>
+                <div class="history-item {{clrs[2]}}" style="margin-left: 15px; margin-right:15px;"></div>
+                <div class="history-item {{clrs[3]}}" style="margin-left: 15px; margin-right:15px;"></div>
+            </div>
         </div>
         <div class="col-md-8">
-            <div style="margin-top: 10px;" *ngFor="let hint of hintsHistory.reverse();">
-                <div style="height: 100px;" class="column">
-                    <p style="font-size: 14px; color: black;">Couleur(s) Juste(s) mais mal placée : {{hint[0]}}</p>
-                    <p style="font-size: 14px; color: black;">Couleur(s) Juste(s) et bien placée : {{hint[1]}}</p>
-                </div>
-                <hr>
+            <div class="column" style="height: 100px; margin-top: 10px;" *ngFor="let hint of hintsHistory.reverse();">
+                <p style="font-size: 14px; color: black;">Couleur(s) Juste(s) mais mal placée : {{hint[0]}}</p>
+                <p style="font-size: 14px; color: black;">Couleur(s) Juste(s) et bien placée : {{hint[1]}}</p>
             </div>
         </div>
     </div>
