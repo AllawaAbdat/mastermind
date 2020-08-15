@@ -9,27 +9,14 @@ import { Component, OnInit, AfterViewChecked, AfterViewInit, HostListener } from
 })
 export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit {
 
+  // Variables
   title = 'Jeu';
   imgPath = '../../assets/icons8-game-boy-visuelle-96.png';
 
-  // Variables
   // Tab Colors used to compare with color of user
   colors = ['red', 'yellow', 'blue', 'orange', 'green', 'black'];
   tempArray = [];
   hintArray = [];
-
-  // tab where we will stock all the 4 color selected by the use
-  selectedColors = [];
-
-  // final variable used to generate 4 random colors
-  final = this.randomFinal();
-
-  // guesses variable used to know how many times the user have tried to find the combinaison
-  guesses = 0;
-
-  // counters
-  hintsFull = 0;
-  hintsHalf = 0;
 
   // tabColor used to display all the colors that the user can pick/choose
   tabColor = [
@@ -59,9 +46,23 @@ export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit
     }
   ];
 
+  // final variable used to generate 4 random colors
+  final = this.randomFinal();
+
+  // tab where we will stock all the 4 color selected by the user
+  selectedColors = [];
+
+  // guesses variable used to know how many times the user have tried to find the combinaison
+  guesses = 0;
+
+  // counters : used for hints
+  hintsFull = 0;
+  hintsHalf = 0;
+
   // arrays of array : used for the history
   selectedColorsToBindOnHints: string[][] = [];
   hintsHistory: number[][] = [];
+  lastHintsTable: any [][] = [];
 
   constructor() { }
 
@@ -108,21 +109,13 @@ export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit
         // If guesses counter is higher than 9 the user loose. The game will restart
         if (this.guesses > 9) {
             alert('Perdu ! C\'est dommage !');
-            this.selectedColors.length = 0;
-            this.hintArray.length = 0;
-            this.selectedColorsToBindOnHints.length = 0;
-            this.hintsHistory.length = 0;
-            this.guesses = 0;
+            this.resetGame();
         }
 
         // if all the hints into hintArray are equals to 'full' (which means all the colors are good and well placed) then alert victory
         if (this.hintArray.every(hints => hints === 'full') && (this.hintArray.length === this.final.length)) {
             alert('Gagné ! Bravo');
-            this.selectedColors.length = 0;
-            this.hintArray.length = 0;
-            this.selectedColorsToBindOnHints.length = 0;
-            this.hintsHistory.length = 0;
-            this.guesses = 0;
+            this.resetGame();
         }
 
         this.selectedColors.length = 0;
@@ -134,8 +127,8 @@ export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit
    */
   randomFinal() {
       const finalFinal = [...new Array(4)].map(color =>  {
-          const random = Math.floor(Math.random() * Math.floor(this.colors.length));
-          return this.colors[random];
+          const random = Math.floor(Math.random() * Math.floor(this.tabColor.length));
+          return this.tabColor[random].color;
       });
       return finalFinal;
   }
@@ -172,7 +165,23 @@ export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit
 
       this.hintsHistory[this.guesses] = [this.hintsHalf, this.hintsFull];
 
+      this.lastHintsTable[this.guesses] = [this.hintsHistory[this.guesses], this.selectedColorsToBindOnHints[this.guesses]];
+
       return hints;
+  }
+
+  /**
+   * Simple function used to reset to 0 all the variables used into the game loop
+   */
+  resetGame() {
+    this.selectedColors.length = 0;
+    this.hintArray.length = 0;
+    this.selectedColorsToBindOnHints.length = 0;
+    this.hintsHistory.length = 0;
+    this.guesses = 0;
+    this.lastHintsTable = [];
+    this.lastHintsTable.length = 0;
+    this.randomFinal();
   }
 
 

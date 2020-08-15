@@ -4,3 +4,16 @@
     font-size: 16px;
     margin: 0 auto;
 }
+
+.wdg-img-style {
+    display: inline-block; 
+    align: center; 
+    vertical-align: center;
+}
+
+.wdg-h1-style {
+    margin-left: 25px; 
+    font-size: 24px; 
+    display: inline-block; 
+    vertical-align: center;
+}

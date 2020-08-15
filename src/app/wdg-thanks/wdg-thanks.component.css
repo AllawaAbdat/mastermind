@@ -7,6 +7,14 @@
   font-size: 20px;
   object-fit: contain;
 }
+
+.wdg-container {
+    margin-left: 15px; 
+    margin-right:15px; 
+    margin: 0 auto; 
+    width: 100%; 
+    background-color: #fafafa;
+}
   
 /* FOR THE CAROUSEL */
 .carousel-img {
