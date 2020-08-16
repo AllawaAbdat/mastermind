@@ -10,18 +10,18 @@ Ce projet est un Mastermind sous forme d'application web crée à l'aide d'Angul
 
 Pour lancer ce projet, rien de plus simple.
 
-#####1 - git clone https://github.com/AllawaAbdat/mastermind.git
-#####2 - Depuis un terminal (cmd, git bash, terminal visual studio etc ...), lancez la commande suivante : npm install
-#####3 - Patientez un petit moment le temps que toutes les dépendences se téléchargent (peut prendre un peu de temps en fonction de votre connexion)
-#####4 - Une fois que tout est installé, ils vous suffira d'executer "ng serve" (l'app sera dispo à l'adresse suivante : localhost:4200)
-#####5 - Il ne vous reste plus qu'à jouer.
+##### 1 - git clone https://github.com/AllawaAbdat/mastermind.git
+##### 2 - Depuis un terminal (cmd, git bash, terminal visual studio etc ...), lancez la commande suivante : npm install
+##### 3 - Patientez un petit moment le temps que toutes les dépendences se téléchargent (peut prendre un peu de temps en fonction de votre connexion)
+##### 4 - Une fois que tout est installé, ils vous suffira d'executer "ng serve" (l'app sera dispo à l'adresse suivante : localhost:4200)
+##### 5 - Il ne vous reste plus qu'à jouer.
 
-#####Le composant le plus important au sein de ce projet sera "wdg-game". Toute la logique du jeu se trouvera au sein de ce composant.
-#####Des commentaires on été ajoutés.
+##### Le composant le plus important au sein de ce projet sera "wdg-game". Toute la logique du jeu se trouvera au sein de ce composant.
+##### Des commentaires on été ajoutés.
 
-#####Vous pouvez également lancer la commande "ng test" pour quelques tests.
+##### Vous pouvez également lancer la commande "ng test" pour quelques tests.
 
-#####Pour plus d'infos, regardez juste en dessous :
+##### Pour plus d'infos, regardez juste en dessous :
 
 ## Development server
 
