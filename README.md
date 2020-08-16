@@ -17,7 +17,7 @@ Pour lancer ce projet, rien de plus simple.
 ##### 5 - Il ne vous reste plus qu'à jouer.
 
 ##### Le composant le plus important au sein de ce projet sera "wdg-game". Toute la logique du jeu se trouvera au sein de ce composant.
-##### Des commentaires on été ajoutés.
+##### Des commentaires ont été ajoutés.
 
 ##### Vous pouvez également lancer la commande "ng test" pour quelques tests.
 
