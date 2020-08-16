@@ -80,20 +80,35 @@ export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit
    * Param color
    */
   selectColor(color) {
+    console.log('content of color ::::', color);
     // we push the color on the right tab
     this.selectedColors.push(color);
 
+    console.log('content of selectedColors ::::', this.selectedColors);
+
+
     // if the user has selected 4 colors, then
     if (this.selectedColors.length === 4) {
+
+        console.log('content of selectedColors ::::', this.selectedColors);
 
         // temp array logic used for the history
         this.tempArray = [];
         this.tempArray.length = 0;
 
+        console.log('content of tempArray ::::', this.tempArray);
+
+
         this.selectedColors.forEach((item) => {
           this.tempArray.push(item);
         });
+
+        console.log('content of tempArray ::::', this.tempArray);
+
         this.selectedColorsToBindOnHints[this.guesses] = this.tempArray;
+
+        console.log('content of selectedColorsToBindOnHints ::::', this.selectedColorsToBindOnHints);
+
 
         // we set the counters to 0 before calling calculateHints
         this.hintsHalf = 0;
@@ -118,6 +133,7 @@ export class WdgGameComponent implements OnInit, AfterViewChecked, AfterViewInit
             this.resetGame();
         }
 
+        this.selectedColors = [];
         this.selectedColors.length = 0;
     }
   }

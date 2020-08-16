@@ -1,28 +1,27 @@
-Hi everyone !
-
-This is a simple Mastermind Angular Project that i have done recently.
-You can pull it if you want and look at the code or even run it on your computer.
-
-The more important into this code will be the "wdg-game" component.
-It contain all the logic of the game.
-It also contain some unit tests with Karma (just testing two functions if they're working/responding)
-
-You can also see the differents components to see how they communicate between them.
-
-I've added some 'light' comments to help you to understand the code.
-
-Don't forget to run 'npm install' into the folder project if you can't run it at the first time with ng serve.
-
-For the test you can run 'ng test' or even 'npm test'.
-
-If you want more informations, just check the informations below.
-
-Anyway, Thank you, and have a nice day !
-
-
-# WdgMastermind
+# Mastermind
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
+
+## Introduction [FR]
+
+Bonjour à tous !
+
+Ce projet est un Mastermind sous forme d'application web crée à l'aide d'Angular 10.0.3.
+
+Pour lancer ce projet, rien de plus simple.
+
+1 - git clone https://github.com/AllawaAbdat/mastermind.git
+2 - Depuis un terminal (cmd, git bash, terminal visual studio etc ...), lancez la commande suivante : npm install
+3 - Patientez un petit moment le temps que toutes les dépendences se téléchargent (peut prendre un peu de temps en fonction de votre connexion)
+4 - Une fois que tout est installé, ils vous suffira d'executer "ng serve" (l'app sera dispo à l'adresse suivante : localhost:4200)
+5 - Il ne vous reste plus qu'à jouer.
+
+Le composant le plus important au sein de ce projet sera "wdg-game". Toute la logique du jeu se trouvera au sein de ce composant.
+Des commentaires on été ajoutés.
+
+Vous pouvez également lancer la commande "ng test" pour quelques tests.
+
+Pour plus d'infos, regardez juste en dessous :
 
 ## Development server
 
